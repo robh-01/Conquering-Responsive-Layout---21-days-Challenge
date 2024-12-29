@@ -1,0 +1,102 @@
+/* reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* styles */
+
+.wrapper {
+  width: 100%;
+  background-color: #23424a;
+  padding-block: clamp(10px, 15vw, 148px);
+}
+
+.container {
+  margin-inline: auto;
+  width: 80%;
+  /* padding: 0; */
+}
+
+.intro-content {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  max-width: 600px;
+  color: white;
+
+  & * {
+    margin-bottom: 30px;
+  }
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 21px;
+}
+
+button {
+  color: #072a2d;
+  background-color: #38cfd9;
+  font-size: 21px;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 32px;
+
+  &:hover {
+  background-color: #069ac7;
+    
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 21px;
+  color: #072a2d;
+  font-weight: bold;
+
+  
+}
