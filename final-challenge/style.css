@@ -41,4 +41,104 @@ h6 {
 }
 /* reset ends here */
 
+/* utility classes */
+:root {
+  --primary-clr--dark: #2e323f;
+  --primary-clr--light: #3b4050;
+  --medium-clr: #6f737f;
+  --secondary-clr--light: #ffffff;
+  --secondary-clr--dark: #cc9a35;
+  --secondary-clr--extra-dark: #855c0a;
+}
 
+.oswald-bold {
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* utility classes end here */
+
+.hero {
+  background-color: var(--primary-clr--light);
+  padding-block: 2em;
+}
+
+.hero__title {
+  line-height: 1.3;
+  font-size: 20vw;
+  color: var(--secondary-clr--light);
+  margin-bottom: 26px;
+}
+
+.hero__title > span {
+  color: var(--secondary-clr--dark);
+}
+
+.hero__description {
+  font-size: 1.5rem;
+}
+
+.hero__paragraph {
+  color: var(--secondary-clr--light);
+  margin-bottom: 26px;
+}
+
+.hero__button {
+  border: none;
+  text-transform: uppercase;
+  background-color: var(--secondary-clr--dark);
+  padding: 0.2em 1em;
+  border-radius: 100px;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background-color: var(--secondary-clr--extra-dark);
+}
+
+.hero__link {
+  text-decoration: none;
+  color: var(--secondary-clr--light);
+}
+
+@media (min-width: 700px) {
+  .hero__title {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .flex {
+    display: flex;
+  }
+
+  .hero {
+    padding-block: 4.5em;
+    
+    & > .flex {
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 36px;
+    }
+  }
+
+  .hero__title {
+    font-size: 5.625rem;
+    margin: 0;
+  }
+}
