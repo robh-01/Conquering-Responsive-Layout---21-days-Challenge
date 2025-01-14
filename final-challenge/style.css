@@ -45,7 +45,7 @@ h6 {
 :root {
   --primary-clr--dark: #2e323f;
   --primary-clr--light: #3b4050;
-  --medium-clr: #6f737f;
+  --medium-clr: #d8d8dd;
   --secondary-clr--light: #ffffff;
   --secondary-clr--dark: #cc9a35;
   --secondary-clr--extra-dark: #855c0a;
@@ -116,6 +116,25 @@ h6 {
   color: var(--secondary-clr--light);
 }
 
+.pri-section {
+  background-color: var(--medium-clr);
+  padding-block: 0.7em;
+}
+
+.pri-section__item {
+  margin-top: 0.7em;
+}
+
+.pri-section__item__title {
+  color: var(--secondary-clr--dark);
+  font-size: 2.2rem;
+}
+
+.pri-section__item__paragraph {
+  font-size: 1.2rem;
+
+}
+
 @media (min-width: 700px) {
   .hero__title {
     font-size: 5rem;
@@ -129,7 +148,7 @@ h6 {
 
   .hero {
     padding-block: 4.5em;
-    
+
     & > .flex {
       align-items: flex-end;
       justify-content: space-between;
@@ -140,5 +159,18 @@ h6 {
   .hero__title {
     font-size: 5.625rem;
     margin: 0;
+  }
+
+  .pri-section {
+    padding-block: 3em;
+
+    & > .flex {
+      gap: 40px;
+    }
+  }
+
+  .pri-section__item {
+    margin: 0;
+    text-align: center;
   }
 }
