@@ -127,17 +127,131 @@ h6 {
 
 .pri-section__item__title {
   color: var(--secondary-clr--dark);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 
 .pri-section__item__paragraph {
   font-size: 1.2rem;
+}
 
+.sec-section {
+  padding-block: 0.7em;
+}
+
+.article__title {
+  color: var(--secondary-clr--dark);
+  font-size: 2.25rem;
+  margin-bottom: 0.3em;
+}
+
+article > p {
+  font-size: 1.2rem;
+}
+
+.article__image {
+  padding-block: 0.8em;
+}
+
+.sidebar {
+  text-align: center;
+  color: var(--secondary-clr--light);
+  padding-top: 1em;
+}
+
+.sidebar__card {
+  background-color: var(--primary-clr--light);
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.sidebar__card h2 {
+  font-size: 1.875rem;
+  margin-bottom: 0.5em;
+}
+
+.sidebar__card p {
+  font-size: 1.125rem;
+}
+
+footer {
+  background-color: var(--primary-clr--light);
+}
+
+.footer__title {
+  color: var(--secondary-clr--light);
+  font-size: 2.625rem;
+  text-align: center;
+}
+
+.footer__wrapper {
+  padding-block: 1rem;
+}
+
+.footer__list__title {
+  color: var(--secondary-clr--dark);
+  font-size: 1.3125rem;
+  margin-block: 0.7em 0.1em;
+}
+
+.footer__list__items,
+.footer__list__description {
+  color: var(--medium-clr);
+  font-size: 1rem;
+}
+
+.footer__list__items {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.footer__list__item > a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--secondary-clr--dark);
+  }
 }
 
 @media (min-width: 700px) {
   .hero__title {
     font-size: 5rem;
+  }
+
+  .sidebar {
+    display: flex;
+    gap: 1em;
+  }
+
+  .sidebar__card {
+    margin-top: 0;
+    padding: 1em 0.5em;
+  }
+
+  footer {
+    padding-block: 5rem;
+  }
+
+  footer hr {
+    visibility: hidden;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .about.footer__list {
+    width: 40%;
+  }
+
+  .footer__list__title {
+    margin-block: 0 0.8em;
+  }
+
+  .footer__list__items {
+    padding-left: 0;
   }
 }
 
@@ -172,5 +286,16 @@ h6 {
   .pri-section__item {
     margin: 0;
     text-align: center;
+  }
+
+  .sec-section {
+    & > .flex {
+      gap: 40px;
+    }
+  }
+
+  .sidebar {
+    align-self: flex-start;
+    flex-direction: column;
   }
 }
