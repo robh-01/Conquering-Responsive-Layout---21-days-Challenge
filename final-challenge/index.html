@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Responsive Page</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,9 +15,24 @@
     />
   </head>
   <body>
-    <header>
-      <nav>
-      </nav>
+    <header class="oswald-bold">
+      <div class="container">
+        <button class="nav-toggle" aria-label="open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <a href="#" class="logo">
+          <img src="./images/logo.svg" alt="conquering responsive layouts" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+            <li class="nav__item nav__item--mod"><a href="#" class="nav__link ">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="hero">

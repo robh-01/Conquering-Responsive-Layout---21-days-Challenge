@@ -69,9 +69,112 @@ h6 {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
+
+  /* added for nav-toggle positioning */
+  position: relative;
 }
 
 /* utility classes end here */
+header {
+  background-color: var(--primary-clr--dark);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  font-size: 0.8rem;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  border-radius: 50%;
+  background-color: #072a2d;
+  color: white;
+  transition: opacity 250ms ease;
+
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.logo {
+  display: inline-block;
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav__item {
+  margin-top: 0.5rem;
+}
+
+.nav__link {
+  color: var(--medium-clr);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--secondary-clr--dark);
+  }
+}
+
+.nav__item--mod {
+  background-color: var(--secondary-clr--dark);
+  color: white;
+  padding: 0.2em 1.5em;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: var(--secondary-clr--extra-dark);
+  }
+}
 
 .hero {
   background-color: var(--primary-clr--light);
@@ -214,6 +317,37 @@ footer {
 }
 
 @media (min-width: 700px) {
+  .nav-toggle {
+    visibility: hidden;
+  }
+
+  header {
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+  }
+
+  header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    visibility: visible;
+    height: auto;
+    position: static;
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav__item {
+    margin-top: 0;
+  }
+
   .hero__title {
     font-size: 5rem;
   }
